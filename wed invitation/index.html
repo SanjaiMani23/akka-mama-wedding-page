@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Shivganesh & Indhumathi Wedding</title>
+   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet">
+
+   <style>
+      :root {
+         --primary-maroon: #800000;
+         --primary-gold: #D4AF37;
+         --bg-cream: #FFFDD0;
+         --bg-gradient-start: #FFD700;
+         /* Gold */
+         --bg-gradient-mid: #FFFDD0;
+         /* Cream */
+         --bg-gradient-end: #FFB6C1;
+         /* Light Pink */
+         --text-dark: #333;
+      }
+
+      body {
+         margin: 0;
+         font-family: "Poppins", sans-serif;
+         background: url('./images/WhatsApp\ Image\ 2026-02-08\ at\ 10.10.15\ AM.jpeg') no-repeat center center fixed, linear-gradient(135deg, #1a0505 0%, #4a0404 40%, #cd3700 70%, #ff8c00 100%);
+         background-size: cover;
+         color: var(--text-dark);
+         text-align: center;
+         overflow-x: hidden;
+      }
+
+      /* Removed previous CSS radial gradients as image is used */
+
+      .hero {
+         min-height: 100vh;
+         background: linear-gradient(to bottom, rgba(255, 215, 0, 0.2), rgba(255, 246, 229, 0.8));
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         padding: 20px;
+         position: relative;
+         border-bottom: 5px solid var(--primary-gold);
+      }
+
+      .hero-frame {
+         border: 3px solid var(--primary-gold);
+         padding: 40px 20px;
+         border-radius: 20px;
+         background: rgba(255, 255, 255, 0.6);
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+         max-width: 800px;
+         width: 90%;
+         position: relative;
+      }
+
+      /* Simulate corner decorations */
+      .hero-frame::after,
+      .hero-frame::before {
+         content: "⚜";
+         font-size: 40px;
+         color: var(--primary-maroon);
+         position: absolute;
+      }
+
+      .hero-frame::before {
+         top: -25px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+
+      .hero-frame::after {
+         bottom: -25px;
+         right: 50%;
+         transform: translateX(50%) rotate(180deg);
+      }
+
+      h1 {
+         font-family: 'Great Vibes', cursive;
+         font-size: 3.5rem;
+         color: var(--primary-maroon);
+         margin: 10px 0;
+         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      .divider {
+         height: 2px;
+         width: 150px;
+         background: var(--primary-gold);
+         margin: 20px auto;
+      }
+
+      .dates-container {
+         display: flex;
+         justify-content: center;
+         gap: 20px;
+         flex-wrap: wrap;
+         margin-top: 30px;
+      }
+
+      .date-card {
+         background: white;
+         padding: 20px 30px;
+         border-radius: 12px;
+         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+         border: 1px solid var(--primary-gold);
+         min-width: 250px;
+      }
+
+      .date-card h3 {
+         font-family: 'Cinzel Decorative', serif;
+         color: var(--primary-maroon);
+         margin: 5px 0;
+      }
+
+      .location {
+         font-size: 1.1rem;
+         margin-top: 30px;
+         color: #555;
+         font-weight: 500;
+      }
+
+      .section {
+         padding: 60px 20px;
+         background: rgba(255, 253, 208, 0.85);
+         /* Cream with opacity */
+         border-top: 1px solid var(--primary-gold);
+         border-bottom: 1px solid var(--primary-gold);
+      }
+
+      /* ... existing code ... */
+
+      footer {
+         background: rgba(59, 27, 0, 0.9);
+         /* Darker brown/black with opacity */
+         color: var(--bg-cream);
+         padding: 40px 20px;
+         border-top: 5px solid var(--primary-gold);
+         position: relative;
+         overflow: hidden;
+      }
+
+      h2 {
+         font-family: 'Cinzel Decorative', serif;
+         color: var(--primary-maroon);
+         font-size: 2.5rem;
+         margin-bottom: 40px;
+      }
+
+      .qr-container {
+         display: flex;
+         justify-content: center;
+         gap: 40px;
+         flex-wrap: wrap;
+      }
+
+      .qr-box {
+         background: white;
+         padding: 10px;
+         border-radius: 15px;
+         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+         border: 2px solid var(--primary-gold);
+         position: relative;
+         transition: transform 0.3s ease;
+      }
+
+      .qr-box:hover {
+         transform: translateY(-5px);
+      }
+
+      .qr-box h3 {
+         font-family: 'Poppins', sans-serif;
+         color: var(--primary-maroon);
+         margin-bottom: 5px;
+      }
+
+      .qr-box img {
+         border: 5px solid #fff;
+         outline: 2px dashed var(--primary-gold);
+         border-radius: 10px;
+      }
+
+      /* Flower icon simulation */
+      .flower-icon {
+         font-size: 24px;
+         position: absolute;
+         top: -15px;
+         left: 50%;
+         transform: translateX(-50%);
+         background: white;
+         padding: 0 5px;
+      }
+
+      .btn-map {
+         display: inline-block;
+         padding: 5px 30px;
+         background: var(--primary-maroon);
+         color: white;
+         text-decoration: none;
+         border-radius: 30px;
+         margin-top: 5px;
+         font-weight: 600;
+         box-shadow: 0 5px 15px rgba(128, 0, 0, 0.3);
+         border: 2px solid var(--primary-gold);
+         transition: all 0.3s ease;
+      }
+
+      .btn-map:hover {
+         background: #5a0000;
+         transform: scale(1.05);
+      }
+
+      footer {
+         background: #3b1b00;
+         /* Darker brown/black */
+         color: var(--bg-cream);
+         padding: 40px 20px;
+         border-top: 5px solid var(--primary-gold);
+         position: relative;
+         overflow: hidden;
+      }
+
+      /* Footer Mandapam Silhouette Simulation using CSS logic or just text decoration for now */
+      footer::before {
+         content: "\f66f";
+         /* Vihara/Temple icon code if available or use generic */
+         font-family: "Font Awesome 6 Free";
+         font-weight: 900;
+         font-size: 100px;
+         opacity: 0.1;
+         position: absolute;
+         bottom: -20px;
+         left: 10%;
+         transform: rotate(-10deg);
+      }
+
+      footer::after {
+         content: "\f66f";
+         font-family: "Font Awesome 6 Free";
+         font-weight: 900;
+         font-size: 100px;
+         opacity: 0.1;
+         position: absolute;
+         bottom: -20px;
+         right: 10%;
+         transform: rotate(10deg);
+      }
+
+      footer h3 {
+         font-family: 'Great Vibes', cursive;
+         font-size: 2rem;
+         color: var(--primary-gold);
+      }
+
+      @media (max-width: 600px) {
+         h1 {
+            font-size: 2.5rem;
+         }
+
+         .hero-frame {
+            padding: 20px;
+         }
+
+         .dates-container {
+            flex-direction: column;
+            align-items: center;
+         }
+      }
+
+      @keyframes blinker {
+         50% {
+            opacity: 0;
+         }
+      }
+   </style>
+</head>
+
+<body>
+
+   <!-- HERO -->
+   <div class="hero">
+      <div class="hero-frame">
+         <h1>Shivganesh & Indhumathi</h1>
+         <div class="divider"></div>
+
+         <div class="dates-container">
+            <div class="date-card">
+               <h3>Reception</h3>
+               <b>
+                  <p><i class="fas fa-ring" style="color:var(--primary-gold);"></i> 19 / 02 / 2026</p>
+                  <p>Night: 6 to 10pm⏰</p>
+               </b>
+            </div>
+            <div class="date-card">
+               <h3>Marriage</h3>
+               <b>
+                  <p><i class="fas fa-fire" style="color:darkorange;"></i> 20 / 03 / 2026</p>
+                  <p>Day: 6 to 7:30pm⏰</p>
+               </b>
+            </div>
+         </div>
+
+         <p class="location"><i class="fas fa-map-marker-alt" style="color:var(--primary-maroon);"></i> <b>K.M Nandhan
+               Thirumana Mandabam, Krishna Nagar, Vellore</b></p>
+      </div>
+   </div>
+
+   <!-- TWO QR SECTION -->
+   <div class="section">
+      <h2><i class="fas fa-qrcode"></i> Scan QR Codes</h2>
+
+      <div class="qr-container">
+         <div class="qr-box">
+            <div class="flower-icon"><i class="fas fa-leaf" style="color:green;"></i></div>
+            <h3>Venue Location QR</h3>
+            <img src="images/WhatsApp Image 2026-02-08 at 10.15.19 AM.jpeg" width="200" alt="Venue Location QR">
+            <p>Scan to navigate to venue</p>
+         </div>
+         <a href="https://maps.app.goo.gl/gzds2b3TdAcdJon67?g_st=aw" target="_blank" class="btn-map">
+            <p style="font-size: 15px; padding: 0;margin: 1px; animation: blinker 1s linear infinite;">
+               click here</p>
+            Navigate to the Celebration
+         </a>
+
+         <div class="qr-box">
+            <div class="flower-icon"><i class="fas fa-spa" style="color:orange;"></i></div>
+            <h3><i>Match a Perfect Partner 💏</i></h3>
+            <img src="images/love_check.jpg" width="200" alt="Wedding Website QR">
+            <p><b>"Love isn't just a feeling; it’s the heat that keeps my soul alive"</b></p>
+         </div>
+
+
+      </div>
+
+      <br>
+
+
+   </div>
+
+   <footer>
+      <h3>Shivganesh <i class="fas fa-heart" style="color:red;"></i> Indhumathi Wedding</h3>
+      <p>We look forward to your blessings <i class="fas fa-praying-hands"></i></p>
+   </footer>
+
+</body>
+
+</html>
