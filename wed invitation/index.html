@@ -12,7 +12,7 @@
    <link
       href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet">
-
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
    <style>
       :root {
          --primary-maroon: #800000;
@@ -349,7 +349,34 @@
       <h3>Shivganesh <i class="fas fa-heart" style="color:red;"></i> Indhumathi Wedding</h3>
       <p>We look forward to your blessings <i class="fas fa-praying-hands"></i></p>
    </footer>
+   <script>
+  const duration = 2 * 1000; // How long it lasts (15 seconds)
+  const animationEnd = Date.now() + duration;
 
+  // Custom flower-like colors
+  const colors = ['#ffc0cb', '#ff69b4', '#ffffff', '#f8bbd0'];
+
+  (function frame() {
+    confetti({
+      particleCount: 2,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 }, // Sprinkle from left
+      colors: colors
+    });
+    confetti({
+      particleCount: 2,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 }, // Sprinkle from right
+      colors: colors
+    });
+
+    if (Date.now() < animationEnd) {
+      requestAnimationFrame(frame);
+    }
+  }());
+</script>
 </body>
 
 </html>
